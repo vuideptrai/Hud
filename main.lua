@@ -1,7 +1,7 @@
 -- Ui.lua
 -- UI Script dùng thư viện OrionLib, hỗ trợ Deltax, Synapse, KRNL...
 
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/heads/main/main.lua"))()
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/main/main.lua"))()
 
 local Window = OrionLib:MakeWindow({
     Name = "vuideptrai",
@@ -36,7 +36,7 @@ TabFarm:AddButton({
     Name = "Load Vuideptrai Script",
     Callback = function()
         local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/heads/main/main.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/main/main.lua"))()
         end)
         if not success then
             warn("Lỗi khi load Vuideptrai Script: "..err)
@@ -106,7 +106,13 @@ TabMaruFree:AddButton({
 TabMaruFree:AddButton({
     Name = "Maru Auto Farm Free",
     Callback = function()
-        print("Kích hoạt Auto Farm Maru miễn phí")
-        -- Thêm code auto farm hoặc load script ở đây
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/maru-autofarm/main/script.lua"))()
+        end)
+        if not success then
+            warn("Lỗi khi load Auto Farm Maru: "..err)
+        else
+            print("Đã kích hoạt Auto Farm Maru!")
+        end
     end
 })
