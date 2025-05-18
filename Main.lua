@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/main/main.lua"))()
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/main/Main.lua"))()
 
 local Window = OrionLib:MakeWindow({
     Name = "vuideptrai",
