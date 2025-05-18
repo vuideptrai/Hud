@@ -1,7 +1,7 @@
 -- Ui.lua
 -- UI Script dùng thư viện OrionLib, hỗ trợ Deltax, Synapse, KRNL...
 
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))()
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/heads/main/main.lua"))()
 
 local Window = OrionLib:MakeWindow({
     Name = "vuideptrai",
@@ -21,7 +21,28 @@ TabFarm:AddButton({
             JoinTeam = "Pirates",
             Translator = true
         }
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))(Settings)
+        end)
+        if not success then
+            warn("Lỗi khi load Redz Hub: "..err)
+        else
+            print("Đã tải Redz Hub thành công!")
+        end
+    end
+})
+
+TabFarm:AddButton({
+    Name = "Load Vuideptrai Script",
+    Callback = function()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/heads/main/main.lua"))()
+        end)
+        if not success then
+            warn("Lỗi khi load Vuideptrai Script: "..err)
+        else
+            print("Đã tải Vuideptrai Script thành công!")
+        end
     end
 })
 
@@ -57,16 +78,28 @@ local TabMaruFree = Window:MakeTab({
 TabMaruFree:AddButton({
     Name = "Load Maru Script 1",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/maruscript1/main/script.lua"))()
-        print("Đã tải Maru Script 1")
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/maruscript1/main/script.lua"))()
+        end)
+        if not success then
+            warn("Lỗi khi load Maru Script 1: "..err)
+        else
+            print("Đã tải Maru Script 1")
+        end
     end
 })
 
 TabMaruFree:AddButton({
     Name = "Load Maru Script 2",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/maruscript2/main/script.lua"))()
-        print("Đã tải Maru Script 2")
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/maruscript2/main/script.lua"))()
+        end)
+        if not success then
+            warn("Lỗi khi load Maru Script 2: "..err)
+        else
+            print("Đã tải Maru Script 2")
+        end
     end
 })
 
