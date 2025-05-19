@@ -1,10 +1,13 @@
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vuideptrai/Hud/main/Main.lua"))()
 
+-- Tạo giao diện Window với icon và intro
 local Window = OrionLib:MakeWindow({
     Name = "vuideptrai",
     HidePremium = false,
     SaveConfig = true,
-    ConfigFolder = "MyScriptConfig"
+    ConfigFolder = "MyScriptConfig",
+    IntroText = "hikaru là nô lệ:",
+    Icon = "http://www.roblox.com/asset/?id=8319027695"
 })
 
 -- Tab Script Farm
