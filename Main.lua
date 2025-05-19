@@ -7,7 +7,7 @@ local Window = OrionLib:MakeWindow({
     SaveConfig = true,
     ConfigFolder = "MyScriptConfig",
     IntroText = "hikaru là nô lệ:",
-    Icon = "http://www.roblox.com/asset/?id=8319027695"
+    Icon = "Https://www.roblox.com_cataloG/16089295882/FUNNY-DOG-PFP"
 })
 
 -- Tab Script Farm
